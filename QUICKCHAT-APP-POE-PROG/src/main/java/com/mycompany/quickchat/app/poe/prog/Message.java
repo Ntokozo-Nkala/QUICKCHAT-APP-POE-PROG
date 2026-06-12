@@ -46,7 +46,7 @@ public static String loggedInSenderPhone = "";
        
     //shows the menu
     public static void show(){
-        System.out.println("\n=========QuickChat App========");
+        System.out.println("\n QuickChat App");
         boolean running = true;
         
         while(running){
@@ -225,7 +225,6 @@ public String sentMessage() {
             sb.append("Message Hash: " + m.hash + "\n");
             sb.append("Recipient: " + m.recipient + "\n");
             sb.append("Message: " + m.content + "\n");
-            sb.append("------------------------\n");
         } 
         return sb.toString(); 
     } 
@@ -316,7 +315,7 @@ public String sentMessage() {
     //Displays the stored message menu
     private static void storedMessagesMenu(){ 
         while (true) { 
-            System.out.println("\n===== STORED MESSAGES ====="); 
+            System.out.println("\n STORED MESSAGES: "); 
             System.out.println("a. Display Sender and Recipient"); 
             System.out.println("b. Display Longest Message"); 
             System.out.println("c. Search by Message ID"); 
