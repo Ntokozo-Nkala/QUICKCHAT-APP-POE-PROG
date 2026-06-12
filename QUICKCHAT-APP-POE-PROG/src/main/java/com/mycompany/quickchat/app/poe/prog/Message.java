@@ -18,7 +18,8 @@ public class Message {
     String sender;
     String content;
     String hash;
-   
+
+    //Stores our information in parallel arrays and stores them
 private static List<Message> sentMessagesArray = new ArrayList<>(); 
 private static int totalMessagesSent = 0; 
 private static Scanner scanner = new Scanner(System.in); 
@@ -44,7 +45,7 @@ public static String loggedInSenderPhone = "";
         this.count = 0;
     }
        
-    //shows the menu
+    //shows the QuickChat menu
     public static void show(){
         System.out.println("\n QuickChat App");
         boolean running = true;
@@ -163,7 +164,7 @@ public static String loggedInSenderPhone = "";
     return "Invalid action";
 }
 
-// Displays the menu 
+// Displays the sent messages menu, stores the information entered by the user and displays the details
 public String sentMessage() { 
     System.out.println("\nChoose an action for this message:"); 
     System.out.println("1. Send Message"); 
@@ -213,7 +214,7 @@ public String sentMessage() {
             return "Invalid choice message disregarded"; 
     } 
 }
-    //method returns all of the messages sent
+    //method returns all of the details of messages
     public static String printMessages(){ 
         if(sentMessagesArray.isEmpty()){ 
             return "No messages have been sent yet."; 
@@ -274,7 +275,8 @@ public String sentMessage() {
             }
             System.out.println("Error: " + cellCheck);
         }
-        
+
+        //ensures that the message the user types is no more than 250 characters
         String messageText; 
         while(true){ 
             System.out.println("Enter your message(max 250 characters): "); 
@@ -292,7 +294,8 @@ public String sentMessage() {
                 break; 
             }
         } 
-        
+
+        //creates the random message ID
     String msgID = String.format("%010d", new Random().nextInt(1_000_000_000)); 
     Message msg = new Message(msgID, messageNumber, recipient, messageText, ""); 
     msg.createMessageHash(); 
@@ -304,6 +307,7 @@ public String sentMessage() {
     return msg;
     }
 
+    //Message getters
     public String getMessageID() {
         return "Message ID generated: " + this.id;
     }
@@ -312,7 +316,7 @@ public String sentMessage() {
         return "Message ID generated: " + this.hash;
     }
 
-    //Displays the stored message menu
+    //Displays the stored message menu - PART 3
     private static void storedMessagesMenu(){ 
         while (true) { 
             System.out.println("\n STORED MESSAGES: "); 
