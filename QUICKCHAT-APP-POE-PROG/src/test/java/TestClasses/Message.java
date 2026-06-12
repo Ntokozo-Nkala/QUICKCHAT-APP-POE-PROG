@@ -1,5 +1,5 @@
 package TestClasses;
-import com.mycompany.quickchat.app.poe.prog;
+import com.mycompany.quickchat.app.poe.prog.Message;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -76,8 +76,6 @@ public class MessageTest {
         String actual = message.sendMessage("+27718693002", "Hi Mike", "Store Message");
         assertEquals("Message successfully stored.", actual);
     }
-}
-
 
     @Test
     public void testSentMessagesArrayCorrectlyPopulated() {
@@ -122,3 +120,4 @@ public class MessageTest {
         String actual = message.sendMessage("0838884567", "It is dinner time !", "Send");
         assertEquals("Message successfully sent.", actual);
     }
+}
