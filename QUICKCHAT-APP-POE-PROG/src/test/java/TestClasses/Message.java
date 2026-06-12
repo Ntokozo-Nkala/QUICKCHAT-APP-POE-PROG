@@ -1,5 +1,5 @@
 package TestClasses;
-import com.mycompany.quickchat.app.poe.prog.Message;
+import com.mycompany.quickchat.app.poe.prog;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
