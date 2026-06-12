@@ -455,7 +455,7 @@ public String sentMessage() {
         System.out.println("Recipient: " + recipientArray.get(i));
         System.out.println("Message ID: " + messageIdArray.get(i));
         System.out.println("Hash: " + messageHashArray.get(i));
-        System.out.println("Message: " + sentMessagesArray.get(i));
+        System.out.println("Message: " + storedMessagesArray.get(i));
     }
 }
 }
