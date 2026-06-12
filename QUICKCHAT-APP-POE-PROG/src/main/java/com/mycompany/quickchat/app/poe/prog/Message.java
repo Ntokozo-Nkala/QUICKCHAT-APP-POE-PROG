@@ -312,7 +312,8 @@ public String sentMessage() {
     public String getMessageHash() {
         return "Message ID generated: " + this.hash;
     }
-    
+
+    //Displays the stored message menu
     private static void storedMessagesMenu(){ 
         while (true) { 
             System.out.println("\n===== STORED MESSAGES ====="); 
@@ -370,6 +371,7 @@ public String sentMessage() {
     }
    }
 }   
+    //Allows the users to search message with message ID
     public static void searchByMessageID(String id){
     for(int i = 0; i < messageIdArray.size(); i++){
         if(messageIdArray.get(i).equals(id)){
@@ -382,7 +384,8 @@ public String sentMessage() {
     }
     System.out.println("Message not found.");
 }
- 
+
+    //deletes message by the message hash
     public static void deleteMessageByHash(String hash) {
     for (int i = 0; i < sentMessagesArray.size(); i++) { 
             Message m = sentMessagesArray.get(i); 
@@ -398,7 +401,8 @@ public String sentMessage() {
         } 
         System.out.println("Message hash not found."); 
     }
-    
+
+    //displays the longest message sent
     public static void showLongestMessage() {
     if (sentMessagesArray.isEmpty()) { 
             System.out.println("No messages stored yet."); 
@@ -418,7 +422,7 @@ public String sentMessage() {
         System.out.println("Longest Message: " + longest.content);
     }
     
- 
+    //displays the senders and recipient information
     public static void displaySenderAndRecipient(){
      if(senderPhoneArray.isEmpty()){
         System.out.println("No messages found.");
@@ -429,13 +433,13 @@ public String sentMessage() {
          System.out.println("Recipient: " + recipientArray.get(i));
      }
 }
-    
+    //searches the messages with the recipient number
     public static void searchByRecipient(String recipient) {
         boolean found = false;
         for(int i = 0; i < recipientArray.size(); i++) {
             if(recipientArray.get(i).equals(recipient)) {
-                System.out.println("Message: " + messageIdArray.get(i));
-                System.out.println("Message ID: " + storedMessagesArray.get(i));
+                System.out.println("Message: " + storedMessageIdArray.get(i));
+                System.out.println("Message ID: " + messageIdArray.get(i));
                 System.out.println("Message Hash: " + messageHashArray.get(i));
                 found = true;
             }
@@ -444,7 +448,7 @@ public String sentMessage() {
             System.out.println("No messages found for this recipient.");
         }
     }
-   
+    //generates a report that displays all the information of a message
     public static void generateReport() {
     if(messageIdArray.isEmpty()){
     System.out.println("No messages found");
