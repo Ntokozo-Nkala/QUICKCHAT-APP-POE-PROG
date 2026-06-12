@@ -14,9 +14,7 @@ public class Main{
         Login userLogin = new Login();
         boolean registered = false;
  
-        System.out.println("========================================");
         System.out.println("|       Welcome to QuickChat App        |");
-        System.out.println("========================================");
  
         while(true){
             System.out.println("\nMain Menu:");
@@ -29,7 +27,7 @@ public class Main{
  
             if(choice.equals("1")) {
  
-                System.out.println("\n====== ACCOUNT REGISTRATION =====");
+                System.out.println("\n ACCOUNT REGISTRATION ");
  
                 System.out.println("Enter your First Name: ");
                 String firstName = scanner.nextLine();
@@ -60,7 +58,7 @@ public class Main{
                     System.out.println("Please register first before logging in.");
  
                 } else {
-                    System.out.println("\n====ACCOUNT LOGIN====");
+                    System.out.println("\n ACCOUNT LOGIN");
  
                     System.out.println("Enter your Username: ");
                     String loginUsername = scanner.nextLine();
