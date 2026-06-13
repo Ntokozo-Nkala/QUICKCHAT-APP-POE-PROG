@@ -15,7 +15,6 @@ public class Message {
     String id;
     int count;
     String recipient;
-    String sender;
     String content;
     String hash;
 
